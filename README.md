@@ -3,8 +3,8 @@ Pytorch implementation for A Few-Shot Learning Framework for Time-Varying Scient
 
 ## Prerequisites
 - Linux
-- CUDA >= 10.0
-- Python >= 3.7
+- CUDA >= 12.3
+- Python >= 3.8
 - Numpy
 - Skimage
 - Pytorch >= 2.0
