@@ -22,7 +22,7 @@ cd Code
 ```
 python3 main.py --config_file vortex.yaml --device 0 --mode train --num_samples 3
 ```
-where config_file stores all configurations for diffusion model inclduing model and training configurations, device indicates which GPU is used for training and inference (the code only supports single GPU training and inference), mode demonstrates whether we need to train or infer diffusion model, and num_samples shows how many samples are used for training. 
+where config_file stores all configurations for diffusion model including model and training configurations, device indicates which GPU is used for training and inference (the code only supports single GPU training and inference), mode demonstrates whether we need to train or infer diffusion model, and num_samples shows how many samples are used for training. 
 
 The format of the config file can be found at configs folder. We have uploaded four .yaml files of vortex, ionization (PD), combustion (MF), and argonne bubble for reference.
 
