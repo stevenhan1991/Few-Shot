@@ -1,0 +1,48 @@
+model:
+  model_path: '../Model/Vortex/'
+  result_path: '../Result/Vortex/'
+  num_scales: 1000
+  sigma_min: 0.01
+  sigma_max: 50
+  beta_min: 0.1
+  beta_max: 20.
+  init_scale: 0.
+  unet:
+    in_channels: 2
+    out_channels: 1
+    ch: 48
+    scale: 3
+    num_blocks: 1
+    num_classes: 10
+  beta_schedule:
+    linear_start: 1e-4
+    linear_end: 2e-2
+    train:
+      n_timestep: 1000
+    inf:
+      n_timestep: 100
+  diffusion:
+    params:
+      model_mean_type: START_X
+      model_var_type: FIXED_LARGE
+      loss_type: MSE
+
+train:
+  epochs: 50000
+  optimizer:
+    lr: 2e-5 
+
+inf:
+  epochs: 50000
+
+task: 'SSR'
+
+data:
+  dataset: 'Vortex'
+  var1: 'Vortex'
+  num_samples: 1
+  num: 90
+  factor: 4
+  sampling: 'uniform'
+  croptimes: 1
+  cropsize: [128,128,128]

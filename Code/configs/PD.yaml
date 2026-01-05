@@ -1,0 +1,40 @@
+model:
+  model_path: '../Model/PD/'
+  result_path: '../Result/PD/'
+  unet:
+    in_channels: 2
+    out_channels: 1
+    ch: 32
+    scale: 3
+  beta_schedule:
+    linear_start: 1e-4
+    linear_end: 2e-2
+    train:
+      n_timestep: 1000
+    inf:
+      n_timestep: 100
+  diffusion:
+    params:
+      model_mean_type: START_X
+      model_var_type: FIXED_LARGE
+      loss_type: MSE
+
+train:
+  epochs: 50000
+  optimizer:
+    lr: 2e-5 
+
+inf:
+  epochs: 50000
+
+task: 'SSR'
+
+data:
+  dataset: 'Ionization'
+  var1: 'PD'
+  num_samples: 3
+  num: 100
+  factor: 4
+  croptimes: 1
+  sampling: 'uniform'
+  cropsize: [32,240,240]
