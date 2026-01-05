@@ -20,13 +20,13 @@ cd Code
 
 - training
 ```
-python3 main.py --mode 'train' --dataset 'Vortex' --applicaion 'temporal'
+python3 main.py --confile_file vortex.yaml --device 0 --mode train --num_samples 3
 ```
+where confile_file stores all configurations for diffusion model inclduing model and training configurations, device indiates which GPU is used for training (the code only supports single GPU training), mode demonstrate whether we need to train or infer diffusion model, and num_samples determinates how many samples are used for training. 
+
 
 - inference
 ```
-python3 main.py --mode 'inf' --dataset 'Vortex' --application 'temporal'
+python3 main.py  --confile_file vortex.yaml --device 0 --mode inf --num_samples 3
 ```
-  year={2023}
-}
 
