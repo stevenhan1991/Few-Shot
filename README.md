@@ -7,7 +7,7 @@ Pytorch implementation for A Few-Shot Learning Framework for Time-Varying Scient
 - Python >= 3.7
 - Numpy
 - Skimage
-- Pytorch >= 1.0
+- Pytorch >= 2.0
 
 ## Data format
 
