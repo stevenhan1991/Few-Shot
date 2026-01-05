@@ -13,7 +13,7 @@ Pytorch implementation for A Few-Shot Learning Framework for Time-Varying Scient
 
 The volume at each time step is saved as a .dat file with the little-endian format. The data is stored in column-major order, that is, z-axis goes first, then y-axis, finally x-axis.
 
-## Training and Inferring
+## Training and Inference
 ```
 cd Code 
 ```
